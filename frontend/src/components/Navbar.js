@@ -16,7 +16,7 @@ function Navbar() {
     <div>
     <IconContext.Provider value={{color: '#000000'}}>
         <div className="navbar">
-            
+            <h1 className='navbar-name'>Hello</h1>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items'>

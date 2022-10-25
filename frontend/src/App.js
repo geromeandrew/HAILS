@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Course from './pages/Course';
-import Statistics from './pages/Statistics';
+import Settings from './pages/Settings';
 import HelpCenter from './pages/HelpCenter';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Dashboard/>} />
           <Route path='/course' element={<Course/>} />
-          <Route path='/statistics' element={<Statistics/>} />
+          <Route path='/settings' element={<Settings/>} />
           <Route path='/help_center' element={<HelpCenter/>} />
         </Routes>
       </Router>

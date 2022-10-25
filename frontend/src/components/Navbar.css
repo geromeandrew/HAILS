@@ -3,7 +3,12 @@
     height: 80px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+}
+
+.navbar-name {
+    position: fixed;
+    left: 300px;
+    top: 30px;
 }
 
 .menu-bars {
@@ -33,7 +38,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 4px 30px 8px 16px;
     list-style: none;
     height: 60px;
 }
@@ -42,7 +47,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 4px 30px 8px 16px;
     list-style: none;
     height: 60px;
     position: relative;
@@ -74,11 +79,15 @@
 }
 
 .nav-text a:hover {
-    background-color: #1a83ff;
+    background-color: #C3DAFE;
+    border-radius: 10px;
+    
+    
 }
 
 .nav-text-hc a:hover {
-    background-color: #1a83ff;
+    background-color: #C3DAFE;
+    border-radius: 10px;
 }
 
 .nav-menu-items {

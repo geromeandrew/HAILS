@@ -2,8 +2,8 @@ import React from 'react'
 
 function Statistics() {
   return (
-    <div className='statistics'>
-        <h1>Statistics</h1>
+    <div className='settings'>
+        <h1>Settings</h1>
     </div>
   )
 }
