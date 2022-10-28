@@ -1,3 +1,6 @@
+* {
+    font-family: 'Montserrat';
+}
 .navbar {
     background-color: #F3F3F7;
     height: 80px;
@@ -59,6 +62,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 18px;
+    font-weight: bold;
     width: 95%;
     height: 100%;
     display: flex;
@@ -71,6 +75,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 18px;
+    font-weight: bold;
     width: 95%;
     height: 100%;
     display: flex;
@@ -82,13 +87,14 @@
 .nav-text a:hover {
     background-color: #C3DAFE;
     border-radius: 10px;
-    
+    transition: 0.5s;
     
 }
 
 .nav-text-hc a:hover {
     background-color: #C3DAFE;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .nav-menu-items {
