@@ -49,8 +49,8 @@ function App() {
                 <Route path='/course' element={<Course/>} />
                 <Route path='/settings' element={<Settings/>} />
                 <Route path='/help_center' element={<HelpCenter/>} /> 
-              <Route path='/letter-game' element={<DetectionSection />} />
-          <Route path='/instruction_section' element={<InstructionSection />} />
+                <Route path='/letter-game' element={<DetectionSection />} />
+                <Route path='/instruction_section' element={<InstructionSection />} />
                 <Route path='/letter-game' element={<DetectionSection />} />
                 <Route path='/login' element={<LoginForm/>} />
               </Routes>
