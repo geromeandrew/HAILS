@@ -31,11 +31,14 @@ export const SidebarData = [
         path: '/help_center',
         icon: <IoIcons.IoMdHelpCircleOutline/>,
         cName: 'nav-text-hc'
-    },
+    }, 
     {
         title: 'Log Out',
-        path: '/dashboard',
+        path: '/login',
         icon: <IoIcons.IoMdLogOut/>,
         cName: 'nav-text-hc'
     }
+    
 ]
+
+    
