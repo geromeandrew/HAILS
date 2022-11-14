@@ -1,9 +1,60 @@
+* {
+  font-family: 'Montserrat';
+}
+
 .lettergame_bg {
     background-image: url('../assets/images/bg-01.jpg');
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     font-size: calc(10px + 2vmin);
+    z-index: 0;
   }
+
+.captionBox {
+  position: absolute;
+  top: 2.5%;
+  left: 2%;
+  width: 750px;
+  height: 230px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50px;
+  border-color: #0071BD;
+  background-color: #A4DDE2;
+  z-index: 10;
+}
+
+.captionText {
+  text-align: justify;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.89);
+  font-weight: bold;
+  padding: 4%;
+}
+
+.btnBack {
+  position: absolute;
+  top: 2.5%;
+  right: 2%;
+  background-color: #667EEA;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 17px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnBack:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.btnBack:active {
+  opacity: 0.5;
+  transition: 0.2s;
+}
