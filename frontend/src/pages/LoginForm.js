@@ -1,9 +1,12 @@
+//import { div } from '@tensorflow/tfjs';
 import React, {useState} from 'react';
 //import Dashboard from './Dashboard';
 import "./LoginForm.css";
 //import Navbar from '../components/Navbar';
 
+
 function Login({ Login,error}) {
+  
   const [details, setDetails] = useState({name: "", email: "", password: ""});
   
   const submitHandler = e => {
@@ -13,6 +16,7 @@ function Login({ Login,error}) {
   }
   
   return (
+    <div className='loginForm'>
     <form onSubmit={submitHandler}>
       <div className='form-inner'>
         <h2>Login</h2>
@@ -32,6 +36,7 @@ function Login({ Login,error}) {
         <input type="submit" value="LOGIN"/>
       </div>
     </form>
+    </div>
   )
 }
 
