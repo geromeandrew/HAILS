@@ -8,6 +8,8 @@ import HelpCenter from './pages/HelpCenter';
 import DetectionSection from './pages/lettergame/DetectionSection';
 import InstructionSection from './pages/lettergame/InstructionSection';
 import LoginForm from './pages/LoginForm';
+import QuestionSection from './pages/lettergame/QuestionSection';
+import Test from './pages/lettergame/Test';
 
 function App() {
   const adminUser = {
@@ -52,7 +54,9 @@ function App() {
                 <Route path='/letter-game' element={<DetectionSection />} />
                 <Route path='/instruction_section' element={<InstructionSection />} />
                 <Route path='/letter-game' element={<DetectionSection />} />
+                <Route path='/question' element={<QuestionSection/>} />
                 <Route path='/login' element={<LoginForm/>} />
+                <Route path='/test' element={<Test/>} />
               </Routes>
             </Router>
           </div>

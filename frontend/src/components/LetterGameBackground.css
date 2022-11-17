@@ -4,14 +4,18 @@
 
 .lettergame_bg {
     background-image: url('../assets/images/bg-01.jpg');
-    width: 100vw;
-    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     font-size: calc(10px + 2vmin);
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
   }
 
 .captionBox {
@@ -55,6 +59,74 @@
 }
 
 .btnBack:active {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.go {
+  position: absolute;
+  bottom: 2.5%;
+  right: 20%;
+  background-color: #667EEA;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 75px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.go:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.go:active {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.questionBox {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 750px;
+  height: 230px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50px;
+  border-color: #0071BD;
+  background-color: #A4DDE2;
+  z-index: 10;
+}
+
+.questionText {
+  text-align: center;
+  font-size: 70px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bolder;
+  padding: 9%;
+}
+
+.guess {
+  position: absolute;
+  bottom: 35%;
+  right: 45%;
+  background-color: #667EEA;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 75px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.guess:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.guess:active {
   opacity: 0.5;
   transition: 0.2s;
 }

@@ -1,0 +1,87 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popup-inner {
+    position: absolute;
+    padding: 10px;
+    width: 50%;
+    max-width: 640px;
+}
+
+.popup-inner .close-btn {
+    position: relative;
+    bottom: 300px;
+    left: 950px;
+    background-color: #667EEA;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 17px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popup-inner .close-btn:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  
+.popup-inner .close-btn:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.popup .guess {
+    position: absolute;
+    bottom: -100px;
+    right: 225px;
+    background-color: #667EEA;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 75px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+  
+.guess:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+  
+.guess:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.popup .questionBox {
+    position: absolute;
+    top: -120px;
+    left: -45px;
+    width: 750px;
+    height: 230px;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50px;
+    border-color: #0071BD;
+    background-color: #A4DDE2;
+    z-index: 10;
+}
+  
+.questionText {
+    text-align: center;
+    font-size: 70px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: bolder;
+    padding: 9%;
+}
