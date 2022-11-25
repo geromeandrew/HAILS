@@ -1,5 +1,5 @@
 import React from 'react'
-import './LetterGameBackground.css'
+import '../assets/styles/LetterGameBackground.css'
 
 // background component
 const LetterGameBackground = (props) => {
