@@ -1,5 +1,5 @@
 import React from 'react'
-import './Test.css'
+import '../../assets/styles/Test.css'
 import Popup from '../../components/popup'
 import { useState } from 'react'
 import Caption from '../../components/Caption'

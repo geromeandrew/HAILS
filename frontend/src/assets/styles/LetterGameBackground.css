@@ -3,7 +3,7 @@
 }
 
 .lettergame_bg {
-    background-image: url('../assets/images/bg-01.jpg');
+    background-image: url('../images/bg-01.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

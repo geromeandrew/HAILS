@@ -91,18 +91,26 @@ return (
       ref={webcamRef}
       muted={true}
       style={{
-        position: "absolute",
-        marginLeft: "auto",
-        marginRight: "auto",
-        marginTop: 'auto',
-        marginBottom: 'auto',
+        position: 'absolute',
+        margin: 'auto',
+        width: '1215px',
+        height: 'auto',
         left: 0,
         right: 0,
         textAlign: "center",
-        zindex: 9,
-        width: 1215,
-        height: 750,
-        border: '3px solid #4C51BF'
+
+        // position: "absolute",
+        // marginLeft: "auto",
+        // marginRight: "auto",
+        // marginTop: 'auto',
+        // marginBottom: 'auto',
+        // left: 0,
+        // right: 0,
+        // textAlign: "center",
+        // zindex: 9,
+        // width: 1215,
+        // height: 750,
+        // border: '10px solid #4C51BF',
       }}
     />
 
@@ -117,9 +125,10 @@ return (
         left: 0,
         right: 0,
         textAlign: "center",
-        zindex: 8,
-        width: 1215,
-        height: 750,
+        zindex: 9,
+        width: '1215px',
+        height: 'auto',
+        border: '10px solid #4C51BF',
       }}
     />
   </div>

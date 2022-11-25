@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./DetectionSection.css";
+import "../../assets/styles/DetectionSection.css";
 
 import DetectionCam from "../../components/DetectionCam";
 import Backdrop from "../../components/Backdrop";
