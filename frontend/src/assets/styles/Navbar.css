@@ -62,7 +62,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 18px;
-    font-weight:700;
+    font-weight:600;
     width: 95%;
     height: 100%;
     display: flex;
@@ -75,7 +75,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     width: 95%;
     height: 100%;
     display: flex;
@@ -125,4 +125,9 @@
 
 span {
     margin-left: 16px;
+}
+
+.nav-text i {
+    height: 40px;
+    width: 40px;
 }

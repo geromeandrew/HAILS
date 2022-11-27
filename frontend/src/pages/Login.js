@@ -21,7 +21,7 @@ function Login() {
           <div className='form-group'>
             <label htmlFor='Password'>Password</label>
             <input type="password" name="password" id='password' placeholder='Password' />
-            <a className = 'a-forgot' href = "#">Forgot Password?</a>
+            <a className = 'a-forgot' href = "/forgot-password">Forgot Password?</a>
           </div>
           
           <ButtonSubmit className = 'btn-sign-up' value = 'SIGN IN' type = 'submit' />
