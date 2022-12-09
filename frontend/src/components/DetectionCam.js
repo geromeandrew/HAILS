@@ -79,15 +79,6 @@ function DetectionCam() {
   useEffect(() => {
     const runDetect = async () => {
       const net = await tf.loadGraphModel(model.body);
-      //   const net = await tf.loadGraphModel(
-      //     "https://sign-language-detection-model.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-      //   );
-      //   const net = await tf.loadGraphModel(
-      //     "https://teachable-machine-model.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-      //   );
-      //   const net = await tf.loadGraphModel("../../assets/model.json");
-
-      //  Loop and detect hands
       setInterval(() => {
         detect(net);
       }, 16.7);
