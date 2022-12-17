@@ -1,3 +1,9 @@
+input, button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +16,6 @@
 .loginForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
 }
 
 .form-group {
