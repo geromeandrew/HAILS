@@ -1,6 +1,7 @@
 import Webcam from "react-webcam";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
+import { useParams } from 'react-router-dom'
 
 import DrawRect from "./DrawRect";
 
@@ -64,27 +65,26 @@ function DetectionCam() {
       tf.dispose(obj);
     }
   };
+  let { id } = useParams();
+  let [model, setModel] = useState([]);
+  useEffect(() => {
+    const getModel = async () => {
+      let response = await fetch(`http://127.0.0.1:8000/api/model/${id}`);
+      let data = await response.json()
+      setModel(data);
+    };
+    getModel();
+  }, [id]);
 
   useEffect(() => {
     const runDetect = async () => {
-      const net = await tf.loadGraphModel(
-        "https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json"
-      );
-      //   const net = await tf.loadGraphModel(
-      //     "https://sign-language-detection-model.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-      //   );
-      //   const net = await tf.loadGraphModel(
-      //     "https://teachable-machine-model.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-      //   );
-      //   const net = await tf.loadGraphModel("../../assets/model.json");
-
-      //  Loop and detect hands
+      const net = await tf.loadGraphModel(model.body);
       setInterval(() => {
         detect(net);
       }, 16.7);
     };
     runDetect();
-  }, []);
+  }, [model.body]);
 return (
   <div>
     <Webcam

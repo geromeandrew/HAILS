@@ -54,8 +54,8 @@ function App() {
               <Route path='/settings' element={<Settings/>} />
               <Route path='/help-center' element={<HelpCenter/>} /> 
               <Route path='/letter-game' element={<DetectionSection />} />
-              <Route path='/instruction-section' element={<InstructionSection />} />
-              <Route path='/letter-game' element={<DetectionSection />} />
+              <Route path='/instruction-section/:id' element={<InstructionSection />} />
+              <Route path='/letter-game/:id' element={<DetectionSection />} />
               <Route path='/question' element={<QuestionSection/>} />
               <Route path='/quiz-game' element={<Test/>} />
               <Route path='/sign-in' element={<Login />} />
