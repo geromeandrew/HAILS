@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center; 
     font-size: calc(10px + 2vmin);
-    z-index: 0;
+    z-index: -100;
     width: 100vw;
     height: 100vh;
   }
@@ -40,10 +40,14 @@
   padding: 4%;
 }
 
+
+/* Copy this and change positioning for default button */
 .btnBack {
   position: absolute;
   top: 2.5%;
   right: 2%;
+  width: 215px;
+  height: 50px;
   background-color: #667EEA;
   border: none;
   color: #FFFFFF;
@@ -62,6 +66,8 @@
   opacity: 0.5;
   transition: 0.2s;
 }
+
+/* /////////////////////////////////////////////////////////////////////// */
 
 .go {
   position: absolute;
