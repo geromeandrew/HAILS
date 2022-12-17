@@ -10,6 +10,9 @@ import InstructionSection from './pages/lettergame/InstructionSection';
 import Login from './pages/Login';
 import QuestionSection from './pages/lettergame/QuestionSection';
 import Test from './pages/lettergame/QuizGame';
+import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import Steptry from './pages/lettergame/steptry';
 
 function App() {
   // const adminUser = {
@@ -54,8 +57,12 @@ function App() {
               <Route path='/instruction-section' element={<InstructionSection />} />
               <Route path='/letter-game' element={<DetectionSection />} />
               <Route path='/question' element={<QuestionSection/>} />
-              <Route path='/login' element={<Login />} />
               <Route path='/quiz-game' element={<Test/>} />
+              <Route path='/sign-in' element={<Login />} />
+              <Route path='/sign-up' element={<Register />} />
+              <Route path='/forgot-password' element={<ForgotPassword />} />
+              <Route path='/test' element={<Test/>} />
+              <Route path='/try' element={<Steptry/>} />
             </Routes>
           </Router>
         </div>
