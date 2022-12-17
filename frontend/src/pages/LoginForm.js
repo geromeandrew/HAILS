@@ -42,7 +42,7 @@ import "../assets/styles/LoginForm.css";
       <div>
 
       </div>
-      <img src=''></img>
+      <img src='../assets/images/login-image.png'></img>
     </div>
   )
 

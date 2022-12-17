@@ -12,12 +12,12 @@ function Navbar() {
     const [sidebar] = useState(true)
 
     //const showSidebar = () => setSidebar(!sidebar)
+
     
   return (
     <div>
     <IconContext.Provider value={{color: '#000000'}}>
         <div className="navbar">
-            <h1 className='navbar-name'>Dashboard</h1>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items'>

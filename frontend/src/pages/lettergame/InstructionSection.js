@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Caption from '../../components/Caption'
 import LetterGameBackground from '../../components/LetterGameBackground'
 import DefaultButton from '../../components/DefaultButton'
+import StepCounter from '../../components/StepCounter/StepCounter'
 
 export default function InstructionSection() {
   let { id } = useParams();
@@ -18,11 +19,14 @@ export default function InstructionSection() {
     };
     getInstruction();
   }, [id]);
+  
   return (
     <div>
         <LetterGameBackground />
         <Caption value = {instruction.body}/>
-        <DefaultButton className = 'btnBack' value = 'GO BACK TO COURSE' />
+        <a href='/course'><DefaultButton className = 'btnBack' value = 'GO BACK TO COURSE' type='submit' /></a>
+        
+        <StepCounter />
     </div>
   )
 }
