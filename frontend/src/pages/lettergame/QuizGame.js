@@ -1,14 +1,14 @@
 import React from 'react'
-import '../../assets/styles/Test.css'
-import Popup from '../../components/popup'
-import { useState } from 'react'
+import '../../assets/styles/QuizGame.css'
+import Popup from '../../components/Popup'
+import { useState, useEffect, useRef } from 'react'
 import Caption from '../../components/Caption'
 import DefaultButton from '../../components/DefaultButton'
 import Question from '../../components/Questionnaire'
+import { Link } from 'react-router-dom';
 
 function Test() {
     const [buttonPopup, setButtonPopup] = useState(false);
-
     return (
         <div className='bg'>
             <main>
@@ -20,10 +20,14 @@ function Test() {
                 {!buttonPopup && <button className='go' onClick={() => setButtonPopup(true)}>GO</button>
                 }
             </main>
+            <div className='removePopup'>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <Question value = 'LEG_RDA'/>
-                <DefaultButton className = 'guess' value = 'GUESS'/>
+                
+                    <Question value = 'L E G _ R D A'/>
+                    <Link to='/letter-game' className="guess">Guess</Link>
+                
             </Popup>
+            </div>
         </div>
     )
 }
