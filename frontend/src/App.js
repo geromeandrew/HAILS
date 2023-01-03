@@ -57,7 +57,7 @@ function App() {
               <Route path='/instruction-section/:id' element={<InstructionSection />} />
               <Route path='/letter-game/:id' element={<DetectionSection />} />
               <Route path='/question' element={<QuestionSection/>} />
-              <Route path='/quiz-game' element={<Test/>} />
+              <Route path='/quiz-game/:id' element={<Test/>} />
               <Route path='/sign-in' element={<Login />} />
               <Route path='/sign-up' element={<Register />} />
               <Route path='/forgot-password' element={<ForgotPassword />} />
