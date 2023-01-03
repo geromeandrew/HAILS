@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/Course.css'
 
 function Course() {
-  let id = 3;
+  let id = 1;
   return (
     <>
     <Navbar />

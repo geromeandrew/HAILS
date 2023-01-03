@@ -21,6 +21,16 @@ function Test() {
         getInstruction();
     }, [id]);
 
+    let [question, setQuestion] = useState([]);
+    useEffect(() => {
+        const getQuestion = async () => {
+        let response = await fetch(`http://127.0.0.1:8000/api/question/${id}/`);
+        let data = await response.json()
+        setQuestion(data);
+        };
+        getQuestion();
+    }, [id]);
+
     return (
         <div className='bg'>
             <main>
@@ -35,7 +45,7 @@ function Test() {
             <div className='removePopup'>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                 
-                    <Question value = 'L E G _ R D A'/>
+                    <Question value = {question.body}/>
                     <Link to='/letter-game' className="guess">Guess</Link>
                 
             </Popup>
