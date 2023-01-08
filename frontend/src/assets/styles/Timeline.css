@@ -1,0 +1,39 @@
+.timeline {
+    box-shadow: -4px 0px 4px 0px rgba(0,0,0,0.25);
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    width: 30%;
+    height: 100vh;
+}
+
+.course-card {
+    border-radius: 10px;
+    width: auto;
+    height: 170px;
+    margin: 65px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.card-image {
+    width: 30%;
+    height: 100%;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    padding: 15%;
+}
+
+.card-text {
+    padding-left: 10px;
+    padding-top: 50px;
+}
+
+.card-text .card-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}

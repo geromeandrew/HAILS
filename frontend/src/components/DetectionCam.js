@@ -98,6 +98,7 @@ return (
         left: 0,
         right: 0,
         textAlign: "center",
+        border: '10px solid #4C51BF',
 
         // position: "absolute",
         // marginLeft: "auto",
@@ -127,8 +128,8 @@ return (
         textAlign: "center",
         zindex: 9,
         width: '1215px',
-        height: 'auto',
-        border: '10px solid #4C51BF',
+        height: '750px',
+        
       }}
     />
   </div>

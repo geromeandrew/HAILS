@@ -38,3 +38,6 @@ main {
     transition: 0.2s;
 }
 
+.btnBack {
+    z-index: 100;
+}
