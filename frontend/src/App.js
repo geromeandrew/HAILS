@@ -13,6 +13,7 @@ import Test from './pages/lettergame/QuizGame';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Steptry from './pages/lettergame/steptry';
+import EmailVerify from './components/EmailVerify';
 
 function App() {
   // const adminUser = {
@@ -63,6 +64,7 @@ function App() {
               <Route path='/forgot-password' element={<ForgotPassword />} />
               <Route path='/test' element={<Test/>} />
               <Route path='/try' element={<Steptry/>} />
+              <Route path='/forgot-password/email-verify' element={<EmailVerify/>} />
             </Routes>
           </Router>
         </div>

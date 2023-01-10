@@ -4,6 +4,10 @@ input, button {
     border: none;
     outline: none;
 }
+img {
+    width: 780px;
+    height: fit-content;
+}
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +77,6 @@ form a {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
-
   margin-left: 20%;
 }
 
@@ -111,4 +114,100 @@ form a {
 
 .sign-up-form .btn-sign-up {
     margin-top: 40px;
+}
+
+/*forgot-password & email verify */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 435px;
+    margin-top: 25px;
+}
+
+.blue {
+    color: #4C51BF;
+}
+
+.forgot-password-form {
+    margin: 20%;
+}
+
+.btn-fp{
+    width: 170px;
+    height: 45px;
+    background-color: #667EEA;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 17px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+.btn-fp:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  
+.btn-fp:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.forgot-pass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resend {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.btn-fp-cancel {
+    width: 170px;
+    height: 45px;
+    color: #667EEA;
+    border: solid 2px;
+    background-color: #FFFFFF;
+    padding: 15px 17px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-fp-cancel:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  
+.btn-fp-cancel:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.resendLink {
+    color: #667EEA;
+}
+
+.resendLink:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  
+.resendLink:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

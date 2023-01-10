@@ -15,26 +15,4 @@ main {
     background-repeat: no-repeat;
 }
 
-.go {
-    position: absolute;
-    bottom: 2.5%;
-    right: 20%;
-    background-color: #667EEA;
-    border: none;
-    color: #FFFFFF;
-    padding: 15px 75px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-}
-  
-.go:hover {
-    opacity: 0.8;
-    transition: 0.2s;
-}
-  
-.go:active {
-    opacity: 0.5;
-    transition: 0.2s;
-}
 

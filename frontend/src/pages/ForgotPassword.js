@@ -1,8 +1,13 @@
 import React from 'react'
+import "../assets/styles/LoginForm.css";
+import Email from '../components/Email'
 
 function ForgotPassword() {
+
   return (
-    <div>ForgotPassword</div>
+    <div className=''>
+        <Email/>
+    </div>
   )
 }
 
