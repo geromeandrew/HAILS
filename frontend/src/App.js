@@ -12,6 +12,7 @@ import QuestionSection from './pages/lettergame/QuestionSection';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Steptry from './pages/lettergame/steptry';
+import EmailVerify from './components/EmailVerify';
 import QuizGame from './pages/lettergame/QuizGame';
 import Timeline from './components/Timeline/Timeline';
 
@@ -63,6 +64,7 @@ function App() {
               <Route path='/forgot-password' element={<ForgotPassword />} />
               <Route path='/quiz-game' element={<QuizGame/>} />
               <Route path='/try' element={<Steptry/>} />
+              <Route path='/forgot-password/email-verify' element={<EmailVerify/>} />
               <Route path='/timeline' element={<Timeline/>} />
             </Routes>
           </Router>

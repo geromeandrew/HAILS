@@ -1,17 +1,16 @@
 import React from 'react'
-//import Button from './DefaultButton'
-import '../assets/styles/popup.css'
+import '../assets/styles/Popup.css'
+import { Link } from 'react-router-dom'
+import Question from '../components/Questionnaire'
 
-function Popup(props) {
+function Popup() {
 
-  return (props.trigger) ? (
-    <div className='popup'>
-        <div className='popup-inner'>
-            <button className='close-btn' onClick={() => props.setTrigger(false)}>BACK</button>
-            { props.children }
-        </div>
+  return (
+    <div className='modal'>
+      <Question value = 'L E G _ R D A'/>
+      <Link to='/letter-game' className="guess">Guess</Link>
     </div>
-  ) : "";
+  )
 }
 
 export default Popup
