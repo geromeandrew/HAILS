@@ -1,0 +1,64 @@
+.timeline {
+    box-shadow: -4px 0px 4px 0px rgba(0,0,0,0.05);
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    width: 30%;
+    height: 100vh;
+    overflow: scroll;
+    padding: 20px 60px;
+}
+
+.course-card {
+    border-radius: 10px;
+    width: auto;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    margin-top: 20px;
+}
+
+.card-image {
+    width: 40%;
+    height: 100%;
+    
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    padding: 15%;
+}
+
+.card-text {
+    padding-left: 10px;
+    margin-top: 50px;
+    margin-right: 16px;
+}
+
+.card-text .card-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.timeline h2 {
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 11px;
+}
+
+.timeline h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 24px;
+}
+
+/* Active */
+
+.course-card:active {
+    background-color: #7F9CF5;
+    color: #fff;
+}
