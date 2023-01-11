@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../assets/styles/QuizGame.css'
 import Popup from '../../components/Popup'
-import { useState} from 'react'
+import { useState, useEffect } from 'react'
 import Caption from '../../components/Caption'
 import DefaultButton from '../../components/DefaultButton'
 import Backdrop from '../../components/Backdrop'
@@ -21,16 +21,6 @@ function QuizGame() {
         setInstruction(data);
         };
         getInstruction();
-    }, [id]);
-
-    let [question, setQuestion] = useState([]);
-    useEffect(() => {
-        const getQuestion = async () => {
-        let response = await fetch(`http://127.0.0.1:8000/api/question/${id}/`);
-        let data = await response.json()
-        setQuestion(data);
-        };
-        getQuestion();
     }, [id]);
     
     function deleteHandler() {
@@ -53,14 +43,6 @@ function QuizGame() {
                 {!buttonPopup && <button className='go' onClick={deleteHandler}>GO</button>
                 }
             </main>
-
-            <div className='removePopup'>
-            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                
-                    <Question value = {question.body}/>
-                    <Link to='/letter-game' className="guess">Guess</Link>
-                
-            </Popup>
 
             <div>
                 {buttonPopup && <Popup/>}
