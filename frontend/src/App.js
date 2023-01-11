@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+import React from 'react';
 import './assets/styles/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
@@ -59,10 +59,11 @@ function App() {
               <Route path='/instruction-section/:id' element={<InstructionSection />} />
               <Route path='/letter-game/:id' element={<DetectionSection />} />
               <Route path='/question' element={<QuestionSection/>} />
+              {/* <Route path='/quiz-game/:id' element={<Test/>} /> */}
               <Route path='/sign-in' element={<Login />} />
               <Route path='/sign-up' element={<Register />} />
               <Route path='/forgot-password' element={<ForgotPassword />} />
-              <Route path='/quiz-game' element={<QuizGame/>} />
+              <Route path='/quiz-game/:id' element={<QuizGame/>} />
               <Route path='/try' element={<Steptry/>} />
               <Route path='/forgot-password/email-verify' element={<EmailVerify/>} />
               <Route path='/timeline' element={<Timeline/>} />
