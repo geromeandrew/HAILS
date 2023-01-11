@@ -9,7 +9,7 @@ import LetterGameBackground from "../../components/LetterGameBackground";
 const DetectionSection = () => {
   return (
     <>
-      <Backdrop />
+      {/* <Backdrop />
       <div className="detection-section">
         <div className="webcam">
           <LetterGameBackground
@@ -20,7 +20,16 @@ const DetectionSection = () => {
             }
           />
         </div>
-      </div>
+      </div> */}
+
+        <LetterGameBackground />
+        <Backdrop />
+        <div className="detection-section">
+          <div className="webcam">
+                <DetectionCam />
+          </div>
+        </div>
+        
     </>
   );
 };
