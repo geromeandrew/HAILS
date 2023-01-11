@@ -1,18 +1,17 @@
 import React from 'react'
 import '../../assets/styles/Timeline.css'
-import char1 from '../../assets/images/character-1.svg'
 
-export default function CourseCard() {
+export default function CourseCard(props) {
 
 
   return (
     <div className='course-card'>
         <div className='card-image'>
-            <img alt='lesson 1' src= {char1} />
+            <img alt={props.alt} src= {props.image} />
         </div>
         <div className='card-text'>
-            <p className='card-title'>Lesson 1: Introduction</p>
-            <p className='card-info'>In this lesson we will talk about the 5 parameters of ASL...</p>
+            <p className='card-title'>{props.title}</p>
+            <p className='card-info'>{props.info}</p>
         </div>
     </div>
   )
