@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/styles/Popup.css'
 import { Link } from 'react-router-dom'
-import Question from '../components/Questionnaire'
+import Question from './Questionnaire'
 
 function Popup() {
 
