@@ -1,3 +1,49 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #273e4780 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #273e4780;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
+
+.start-learning{
+  width: 215px;
+  height: 50px;
+  background-color: #667EEA;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 17px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: grid;
+  margin: auto;
+  cursor: pointer;
+}
+
+.start-learning:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+  
+.start-learning:active {
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+
 .timeline {
     box-shadow: -4px 0px 4px 0px rgba(0,0,0,0.05);
     position: fixed;
@@ -6,22 +52,26 @@
     background-color: #fff;
     width: 30%;
     height: 100vh;
-    overflow: scroll;
-    padding: 20px 60px;
+    overflow-y: scroll;
+    padding: 1.5%;
+}
+.timeline ul li {
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    margin: 20px 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .course-card {
-    border-radius: 10px;
-    width: auto;
-    height: 170px;
+    width: 100%;
+    height: 180px;
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    margin-top: 20px;
+    
 }
 
 .card-image {
-    width: 40%;
+    width: 36%;
     height: 100%;
     
 }
@@ -33,9 +83,10 @@
 }
 
 .card-text {
+    width: 64%;
     padding-left: 10px;
-    margin-top: 50px;
-    margin-right: 16px;
+    padding-top: 45px;
+    padding-right: 16px;
 }
 
 .card-text .card-title {
@@ -61,4 +112,61 @@
 .course-card:active {
     background-color: #7F9CF5;
     color: #fff;
+}
+
+
+/* course content */
+.course-content-container {
+    margin-right: 30%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: fixed;
+    height: 100vh;
+    left: 300px;
+    top: 0;
+    overflow-y: scroll;
+}
+.course-content {
+    margin: 0 5%;
+}
+
+.course-content h2 {
+    margin-top: 100px;
+}
+
+.course-content p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.course-content img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 60%;
+    height: auto;
+}
+
+.course-content .icon-cam {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    width: 60px;
+}
+
+.course-content .cam-info {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.start-link {
+    text-decoration: none;
+}
+
+.course-not-available {
+    opacity: 0.4;
 }
