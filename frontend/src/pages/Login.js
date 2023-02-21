@@ -26,7 +26,7 @@ function Login() {
           
           <ButtonSubmit className = 'btn-sign-up' value = 'SIGN IN' type = 'submit' />
         </form>
-        <div>
+        <div className='login-img'>
           <img alt="login introduction" src= {imgLogin}></img>
         </div>
 

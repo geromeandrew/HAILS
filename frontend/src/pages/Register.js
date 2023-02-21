@@ -41,7 +41,7 @@ function Register() {
           
           <ButtonSubmit className = 'btn-sign-up' value = 'SIGN UP' type = 'submit' />
         </form>
-        <div>
+        <div className="login-img">
           <img alt="login introduction" src= {imgLogin}></img>
         </div>
 
