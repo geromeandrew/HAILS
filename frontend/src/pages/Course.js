@@ -13,8 +13,7 @@ function Course() {
     <>
     <Navbar />
     <div className='course'>
-      <h1>Course</h1>
-      <Link to={'/quiz-game/' + id} className="qzButton">Quiz</Link>
+      {/* <Link to={'/quiz-game/' + id} className="qzButton">Quiz</Link> */}
     </div>
     <Timeline />
     </>

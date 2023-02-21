@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Email() {
     return (
-        <div className='forgot-pass'>
+    <div className='forgot-pass'>
         <form className='forgot-password-form'>
           <div className='sign-head'>FORGOT<span className='blue'> PASSWORD?</span></div>
           <div>Enter the email address associated with your account</div>
@@ -18,7 +18,7 @@ function Email() {
                 <Link to='email-verify' ><ButtonSubmit className = 'btn-fp' value = 'NEXT' type = 'submit' /></Link>
             </div>
         </form>
-        <div>
+        <div className='login-img'>
             <img alt="login introduction" src= {imgLogin}></img>
         </div>
     </div>

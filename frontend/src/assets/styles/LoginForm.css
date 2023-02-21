@@ -5,8 +5,8 @@ input, button {
     outline: none;
 }
 img {
-    width: 780px;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
 }
 * {
     margin: 0;
@@ -14,12 +14,6 @@ img {
     box-sizing: border-box;
     font-family: 'Montserrat';
     /* font-size: 13px; */
-    overflow: hidden;
-}
-
-.loginForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .form-group {
@@ -58,7 +52,7 @@ form a {
 }
 
 .form-group input {
-    width: 435px;
+    width: 76%;
     height: 60px;
     border: #667EEA;
     border-style: solid;
@@ -92,24 +86,15 @@ form a {
 
 
 /* SIGNUP */
-.registerForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-}
+
 
 .sign-up-form {
     margin: 15%;
 }
 
 #first-name, #last-name, #password-sign-up, #confirm-password {
-    width: 300px;
+    width: 90%;
     margin-top: 25px;
-}
-
-#name-group, #password-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .sign-up-form .btn-sign-up {
@@ -130,9 +115,7 @@ form a {
     color: #4C51BF;
 }
 
-.forgot-password-form {
-    margin: 20%;
-}
+
 
 .btn-fp{
     width: 170px;
@@ -157,10 +140,7 @@ form a {
     transition: 0.2s;
 }
 
-.forgot-pass {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 .resend {
     display: block;
@@ -210,4 +190,78 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+
+/* //////////LOGIN IMG */
+.loginForm .login-img {
+    height: 100%
+}
+
+
+/* ////media query/// */
+
+
+
+@media screen and (min-width: 1200px) {
+    .loginForm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .registerForm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
+
+    #name-group, #password-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .forgot-pass {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .forgot-password-form {
+        margin: 20%;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .loginForm {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow-y: scroll;
+    }
+
+    .sign-in-form {
+        margin: 12% 10%;
+    }
+
+    .login-img {
+        display: none;
+    }
+
+    #name-group, #password-group {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .forgot-pass {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .forgot-password-form {
+        margin: 12%;
+    }
+
 }
