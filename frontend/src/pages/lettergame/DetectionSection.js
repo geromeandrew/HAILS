@@ -5,6 +5,7 @@ import "../../assets/styles/DetectionSection.css";
 import DetectionCam from "../../components/DetectionCam";
 import Backdrop from "../../components/Backdrop";
 import LetterGameBackground from "../../components/LetterGameBackground";
+import ImageClassify from "./ImageClassify";
 
 const DetectionSection = () => {
   return (
@@ -26,7 +27,7 @@ const DetectionSection = () => {
         <Backdrop />
         <div className="detection-section">
           <div className="webcam">
-                <DetectionCam />
+                <ImageClassify />
           </div>
         </div>
         

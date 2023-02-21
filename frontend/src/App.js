@@ -15,6 +15,8 @@ import Steptry from './pages/lettergame/steptry';
 import EmailVerify from './components/EmailVerify';
 import QuizGame from './pages/lettergame/QuizGame';
 import Timeline from './components/Timeline/Timeline';
+import DisplayConfirm from './pages/lettergame/DisplayConfirm';
+import TryAgain from './pages/lettergame/TryAgain';
 
 function App() {
   // const adminUser = {
@@ -67,6 +69,8 @@ function App() {
               <Route path='/try' element={<Steptry/>} />
               <Route path='/forgot-password/email-verify' element={<EmailVerify/>} />
               <Route path='/timeline' element={<Timeline/>} />
+              <Route path='/displayconfirm/:id' element={<DisplayConfirm/>} />
+              <Route path='/try-again/:id' element={<TryAgain/>} />
             </Routes>
           </Router>
         </div>
