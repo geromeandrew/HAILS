@@ -14,7 +14,7 @@ function Email() {
               <input type="email" name="email" id='email' placeholder='Email' />
           </div>
             <div className='buttons'>
-                <Link to={{ pathname: "/sign-in" }} ><ButtonSubmit className = 'btn-fp-cancel' value = 'CANCEL'/></Link>
+                <Link to={{ pathname: "/" }} ><ButtonSubmit className = 'btn-fp-cancel' value = 'CANCEL'/></Link>
                 <Link to='email-verify' ><ButtonSubmit className = 'btn-fp' value = 'NEXT' type = 'submit' /></Link>
             </div>
         </form>

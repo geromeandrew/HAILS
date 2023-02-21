@@ -10,7 +10,7 @@ import * as FiIcons from "react-icons/fi";
 export const SidebarData = [
     {
         title: 'Dashboard',
-        path: '/',
+        path: '/dashboard',
         icon: <IoIcons5.IoGridOutline/>,
         cName: 'nav-text'
     },
@@ -34,7 +34,7 @@ export const SidebarData = [
     }, 
     {
         title: 'Log Out',
-        path: '/sign-in',
+        path: '/',
         icon: <IoIcons.IoMdLogOut/>,
         cName: 'nav-text-hc'
     }

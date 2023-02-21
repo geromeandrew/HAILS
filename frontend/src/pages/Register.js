@@ -8,7 +8,7 @@ function Register() {
         <form className='sign-up-form'>
           <div>
               <span>Already have an account? </span>
-              <a href = '/sign-in'>Sign In</a>
+              <a href = '/'>Sign In</a>
           </div>
           <p className='sign-head'>SIGN UP</p>
           <p>Start learning by filling up the needed information.</p>
