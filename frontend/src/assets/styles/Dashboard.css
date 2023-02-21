@@ -74,6 +74,12 @@
     height: 121px;
 }
 
+.navigate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .navigate p{
     color: #FFFFFF;
 }
@@ -126,4 +132,20 @@
     height: 150px;
     border-radius: 10px;
     color: #FFFFFF;
+}
+
+.continue_btn {
+    width: 50px;
+    height: 50px;
+    background-color: #667EEA;
+    font-weight: bolder;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 210px;
+}
+
+.continue_btn:hover {
+    background-color: #C3DAFE;
 }

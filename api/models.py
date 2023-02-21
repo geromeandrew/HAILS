@@ -25,3 +25,11 @@ class Question(models.Model):
 
     def __str__(self):
         return self.body
+
+class Accounts(models.Model):
+    id = models.PositiveBigIntegerField(primary_key=True)
+    username = models.CharField(max_length=50, unique=True)
+    password = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.username
