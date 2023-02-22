@@ -69,3 +69,49 @@
     font-weight: bolder;
     padding: 13%;
 }
+
+.try-again {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    background-color: #667EEA;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 50px;
+    padding: 15px 75px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+}
+  
+.try-again:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+  
+.try-again:active {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.confirmText {
+    text-align: center;
+    font-size: 50px;
+    color: #0071BD;
+    font-weight: bolder;
+    padding: 13%;
+}
+
+.tryagainText {
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-weight: bolder;
+    padding: 13%;
+}
+

@@ -6,6 +6,7 @@ export default function CourseCard(props) {
 
   return (
     <div className='course-card'>
+      {/*  */}
         <div className='card-image'>
             <img alt={props.alt} src= {props.image} />
         </div>
