@@ -25,7 +25,7 @@ function EmailVerify() {
             </div>
             <div className = 'resend'>I didn't receive the code. <a className='resendLink' href = "#">RESEND</a></div>
             </form>
-            <div>
+            <div className='login-img'>
                 <img alt="login introduction" src= {imgLogin}></img>
             </div>
         </div>

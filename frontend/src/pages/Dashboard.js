@@ -3,8 +3,11 @@ import Navbar from '../components/Navbar';
 import Profile from '../components/Profile'
 import '../assets/styles/Dashboard.css'
 import Cartoon from '../assets/images/1.png'
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <>
     <Navbar />
@@ -22,7 +25,7 @@ function Dashboard() {
             <div className='navigate'>
               <p className='item1'>Let's talk about numbers</p>
               <p className='item2'>10 stages</p>
-              <button>GO</button>
+              <button onClick={() => navigate("/course")} className='continue_btn'>{'>'}</button>
             </div>
           </div>
         </div>

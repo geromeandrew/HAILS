@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StepNavigation from "./StepNavigation";
 import '../../assets/styles/StepCounter.css';
 
-function StepCounter() {
+function StepCounter(props) {
 
     const labelArray = ['Recto', 'Legarda', 'Pureza', 'V.Mapa', 'J.Ruiz', 'Gilmore', 'Betty Go', 'Araneta', 'Anonas', 'Katipunan', 'Santolan', 'Marikina', 'Antipolo']
     const [currentStep, updateCurrentStep] = useState(1);
@@ -26,7 +26,8 @@ function StepCounter() {
                 
                 
                 {/* <button className="primaryButton" disabled={currentStep === 1} onClick={() => updateStep(currentStep - 1)}>Previous Step</button> */}
-                <button className="btn-go" disabled={currentStep === labelArray.length} onClick={() => updateStep(currentStep+1)}>Go</button>
+                {/* <button className="btn-go" disabled={currentStep === labelArray.length} onClick={() => updateStep(currentStep+1)}>Go</button> */}
+                <button className="btn-go" disabled={currentStep === labelArray.length} onClick={props.deleteHandler}>Go</button>
             </div>
             
         </div>

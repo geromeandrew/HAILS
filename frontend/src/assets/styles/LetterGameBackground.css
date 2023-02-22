@@ -110,3 +110,39 @@
   padding: 9%;
 }
 
+
+/* //////////////////////////Congrats Component///////////////////////// */
+.div-congrats {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 55%;
+  background-color: #FFFFFF;
+  border-radius: 5%;
+  z-index: 90;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.div-congrats img {
+  height: 50%;
+  width: auto;
+  
+}
+
+.div-congrats h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.div-congrats p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 1%;
+}

@@ -39,9 +39,9 @@ function QuizGame() {
                 }
                 {!buttonPopup && <a href='/course'><DefaultButton className = 'btnBack' value = 'GO BACK TO COURSE' type='submit' /></a>
                 }
-                <StepCounter /> 
-                {!buttonPopup && <button className='go' onClick={deleteHandler}>GO</button>
-                }
+                {!buttonPopup && <StepCounter deleteHandler = {deleteHandler} setButtonPopup = {setButtonPopup} /> }
+                {/* {!buttonPopup && <button className='go' onClick={deleteHandler}>GO</button>
+                } */}
             </main>
 
             <div>
