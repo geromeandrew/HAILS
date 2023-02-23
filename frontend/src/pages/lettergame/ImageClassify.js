@@ -52,7 +52,7 @@ function ImageClassify() {
   };
   useEffect(() => {
     if (isUpdated.current) {
-      navigate("/displayconfirm/" + id);
+      navigate("/displayconfirm/" + pk);
     }
   }, [imageSrc]);
 
