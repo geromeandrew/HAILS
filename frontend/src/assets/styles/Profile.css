@@ -28,9 +28,9 @@
     height: 100px;
 }
 
-.calendar {
+/* .calendar {
     height: 200px;
-}
+} */
 .course-header{
     display: flex;
     justify-content: flex-start;
