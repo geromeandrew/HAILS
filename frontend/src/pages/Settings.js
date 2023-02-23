@@ -1,6 +1,4 @@
 import React from 'react'
-import Congrats from '../components/Congrats';
-
 import Navbar from '../components/Navbar';
 
 function Statistics() {
@@ -10,7 +8,6 @@ function Statistics() {
     <div className='settings'>
       <h1>Settings</h1>
     </div>
-    <Congrats />
     </>
   )
 }
