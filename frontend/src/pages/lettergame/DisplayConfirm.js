@@ -40,11 +40,13 @@ function DisplayConfirm() {
   const second = array[1];
   answer = first + prediction + second;
 
+
   return (
     <>
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
+
         {answer === ans.body ? (
           <>
             <button

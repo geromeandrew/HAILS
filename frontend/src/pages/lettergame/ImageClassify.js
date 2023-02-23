@@ -1,7 +1,7 @@
 import Webcam from "react-webcam";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../../assets/styles/ImageClassify.css";
 import { pk } from "../Lessons/CourseContent";
@@ -17,8 +17,10 @@ export { prediction, resetPrediction };
 function ImageClassify() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const isUpdated = useRef(false);
   const [imageSrc, setImageSrc] = useState(null);
   const [model, setModel] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadModel = async () => {
@@ -30,11 +32,29 @@ function ImageClassify() {
     loadModel();
   }, []);
 
+  // const capture = () => {
+  //   const imageSrc = webcamRef.current.getScreenshot();
+  //   const newImage = imageSrc;
+  //   setImageSrc(newImage);
+  //   console.log(prediction);
+  //   navigate("/displayconfirm/" + id);
+  // };
+
   const capture = () => {
+    if (!isUpdated.current) {
+      isUpdated.current = true;
+    }
+
     const imageSrc = webcamRef.current.getScreenshot();
     setImageSrc(imageSrc);
     console.log(prediction);
+    
   };
+  useEffect(() => {
+    if (isUpdated.current) {
+      navigate("/displayconfirm/" + id);
+    }
+  }, [imageSrc]);
 
   useEffect(() => {
     if (imageSrc) {
@@ -57,44 +77,38 @@ function ImageClassify() {
   }, [imageSrc, model]);
 
   return (
-    <>
-      {prediction !== "" ? (
-        <Link to={"/displayconfirm/" + pk}>
-          <button
-            className="submitButton"
-            onClick={capture}
-            // onClick={() => {
-            //   capture();
-            //   updatePk(pk + 1);
-            //   console.log(pk);
-            // }}
-          >
-            Submit
-          </button>
-        </Link>
-      ) : (
-        <button className="submitButton" onClick={capture}>
-          Submit
-        </button>
-      )}
-
+    <div className="image-classification-div">
       <Webcam
+        className="webcam-div"
         screenshotFormat="image/jpeg"
         ref={webcamRef}
         muted={true}
-        style={{
-          position: "absolute",
-          margin: "auto",
-          width: "1215px",
-          height: "auto",
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          border: "10px solid #4C51BF",
-        }}
+        // style={{
+        //   position: "absolute",
+        //   margin: "auto",
+        //   width: "1215px",
+        //   height: "auto",
+        //   left: 0,
+        //   right: 0,
+        //   textAlign: "center",
+        //   border: "10px solid #4C51BF",
+        // }}
       />
 
-      <canvas
+      {/* {prediction !== "" ? (
+        <button className="submitButton" onClick={capture}>
+            Submit
+        </button>
+      ) : (
+        <button className="submitButton" onClick={capture}>
+          Capture
+        </button>
+      )} */}
+      <button className="submitButton" onClick={capture}>
+          Capture
+      </button>
+
+      {/* <canvas
         ref={canvasRef}
         style={{
           position: "absolute",
@@ -109,8 +123,8 @@ function ImageClassify() {
           width: "1215px",
           height: "750px",
         }}
-      />
-    </>
+      /> */}
+    </div>
   );
 }
 
