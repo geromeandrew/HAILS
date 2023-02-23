@@ -22,8 +22,6 @@ function TryAgain() {
     getQuestion();
   }, [id, question.body]);
 
-  //   let pk = 2;
-
   const quest = String(question.body);
   const array = quest.split("_");
   const first = array[0];
@@ -35,11 +33,17 @@ function TryAgain() {
       <LetterGameBackground />
       <div className="modal">
         <TryAgainText value={answer} />
-        <button>
-          <Link to={"/letter-game"} className="try-again">
-            Try Again
-          </Link>
-        </button>
+        {prediction !== "" ? (
+          <button
+            onClick={() => {
+              resetPrediction("");
+            }}
+          >
+            <Link to={"/letter-game"} className="try-again">
+              Try Again
+            </Link>
+          </button>
+        ) : null}
       </div>
     </>
   );

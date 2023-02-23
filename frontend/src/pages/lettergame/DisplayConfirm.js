@@ -42,12 +42,6 @@ function DisplayConfirm() {
 
   return (
     <>
-      {/* {(() => {
-        if (answer === "R E C T O") {
-          updatePk(pk + 1);
-          console.log(pk);
-        }
-      })()} */}
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
