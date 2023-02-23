@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../../assets/styles/Popup.css";
 import { Link, useParams } from "react-router-dom";
 
-import { prediction } from "./ImageClassify";
+import { prediction, resetPrediction } from "./ImageClassify";
 import LetterGameBackground from "../../components/LetterGameBackground";
 import Confirm from "../../components/Confirm";
+import { pk } from "../Lessons/CourseContent";
+import { updatePk } from "../Lessons/CourseContent";
 
 function DisplayConfirm() {
   let { id } = useParams();
@@ -22,8 +24,6 @@ function DisplayConfirm() {
     getQuestion();
   }, [id, question.body]);
 
-  let pk = 1;
-
   const quest = String(question.body);
   const array = quest.split("_");
   const first = array[0];
@@ -32,17 +32,37 @@ function DisplayConfirm() {
 
   return (
     <>
+      {/* {(() => {
+        if (answer === "R E C T O") {
+          updatePk(pk + 1);
+          console.log(pk);
+        }
+      })()} */}
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
-        {answer === "L E G A R D A" ? (
-          <Link to={"/quiz-game/" + (pk + 1)} className="guess">
-            Confirm
-          </Link>
+        {answer === "R E C T O" ? (
+          <>
+            <button
+              onClick={() => {
+                updatePk(pk + 1);
+                console.log("click" + pk);
+                resetPrediction("");
+              }}
+            >
+              <Link to={"/quiz-game/" + (pk + 1)} className="guess">
+                Confirm
+              </Link>
+            </button>
+          </>
         ) : (
-          <Link to={"/try-again/" + pk} className="guess">
-            Confirm
-          </Link>
+          <>
+            <button>
+              <Link to={"/try-again/" + pk} className="guess">
+                Confirm
+              </Link>
+            </button>
+          </>
         )}
       </div>
     </>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../assets/styles/Popup.css";
 import { Link, useParams } from "react-router-dom";
 
-import { prediction } from "./ImageClassify";
+import { prediction, resetPrediction } from "./ImageClassify";
 import LetterGameBackground from "../../components/LetterGameBackground";
 import TryAgainText from "../../components/TryAgainText";
 
@@ -35,9 +35,11 @@ function TryAgain() {
       <LetterGameBackground />
       <div className="modal">
         <TryAgainText value={answer} />
-        <Link to={"/letter-game"} className="try-again">
-          Try Again
-        </Link>
+        <button>
+          <Link to={"/letter-game"} className="try-again">
+            Try Again
+          </Link>
+        </button>
       </div>
     </>
   );
