@@ -1,7 +1,7 @@
 import Webcam from "react-webcam";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../../assets/styles/ImageClassify.css";
 
@@ -10,8 +10,10 @@ export let prediction = "";
 function ImageClassify() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const isUpdated = useRef(false);
   const [imageSrc, setImageSrc] = useState(null);
   const [model, setModel] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadModel = async () => {
@@ -23,11 +25,29 @@ function ImageClassify() {
     loadModel();
   }, []);
 
+  // const capture = () => {
+  //   const imageSrc = webcamRef.current.getScreenshot();
+  //   const newImage = imageSrc;
+  //   setImageSrc(newImage);
+  //   console.log(prediction);
+  //   navigate("/displayconfirm/" + id);
+  // };
+
   const capture = () => {
+    if (!isUpdated.current) {
+      isUpdated.current = true;
+    }
+
     const imageSrc = webcamRef.current.getScreenshot();
     setImageSrc(imageSrc);
     console.log(prediction);
+    
   };
+  useEffect(() => {
+    if (isUpdated.current) {
+      navigate("/displayconfirm/" + id);
+    }
+  }, [imageSrc]);
 
   useEffect(() => {
     if (imageSrc) {
@@ -70,17 +90,18 @@ function ImageClassify() {
         // }}
       />
 
-      {prediction !== "" ? (
-        <Link to={"/displayconfirm/" + id}>
-          <button className="submitButton" onClick={capture}>
+      {/* {prediction !== "" ? (
+        <button className="submitButton" onClick={capture}>
             Submit
-          </button>
-        </Link>
+        </button>
       ) : (
         <button className="submitButton" onClick={capture}>
           Capture
         </button>
-      )}
+      )} */}
+      <button className="submitButton" onClick={capture}>
+          Capture
+      </button>
 
       {/* <canvas
         ref={canvasRef}
