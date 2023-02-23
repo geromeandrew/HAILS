@@ -4,8 +4,15 @@ import * as tf from "@tensorflow/tfjs";
 import { Link, useNavigate } from "react-router-dom";
 
 import "../../assets/styles/ImageClassify.css";
+import { pk } from "../Lessons/CourseContent";
+import { updatePk } from "../Lessons/CourseContent";
 
-export let prediction = "";
+let prediction = "";
+function resetPrediction(newPrediction) {
+  prediction = newPrediction;
+}
+
+export { prediction, resetPrediction };
 
 function ImageClassify() {
   const webcamRef = useRef(null);
@@ -53,7 +60,7 @@ function ImageClassify() {
     if (imageSrc) {
       const image = new Image();
       image.src = imageSrc;
-      image.onload = async () => await predict(image, model);
+      image.onload = () => predict(image, model);
     }
     const predict = (imageData, model) => {
       const tensor = tf.browser.fromPixels(imageData).toFloat();
@@ -68,8 +75,6 @@ function ImageClassify() {
       prediction = imgLabel[maxIndex];
     };
   }, [imageSrc, model]);
-
-  let id = 1;
 
   return (
     <div className="image-classification-div">

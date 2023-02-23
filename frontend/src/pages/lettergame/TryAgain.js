@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../assets/styles/Popup.css";
 import { Link, useParams } from "react-router-dom";
 
-import { prediction } from "./ImageClassify";
+import { prediction, resetPrediction } from "./ImageClassify";
 import LetterGameBackground from "../../components/LetterGameBackground";
 import TryAgainText from "../../components/TryAgainText";
 
@@ -22,8 +22,6 @@ function TryAgain() {
     getQuestion();
   }, [id, question.body]);
 
-  //   let pk = 2;
-
   const quest = String(question.body);
   const array = quest.split("_");
   const first = array[0];
@@ -35,9 +33,17 @@ function TryAgain() {
       <LetterGameBackground />
       <div className="modal">
         <TryAgainText value={answer} />
-        <Link to={"/letter-game"} className="try-again">
-          Try Again
-        </Link>
+        {prediction !== "" ? (
+          <button
+            onClick={() => {
+              resetPrediction("");
+            }}
+          >
+            <Link to={"/letter-game"} className="try-again">
+              Try Again
+            </Link>
+          </button>
+        ) : null}
       </div>
     </>
   );
