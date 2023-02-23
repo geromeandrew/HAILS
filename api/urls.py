@@ -9,5 +9,6 @@ urlpatterns = [
     path('models/', views.getAllMLModel, name='all-models'),
     path('model/<str:pk>', views.getMLModel, name='model'),
     path('question/<str:pk>/', views.getQuestion, name='question'),
-    
+    path('answer/<str:pk>/', views.getAnswer, name='answer'),
+
 ]

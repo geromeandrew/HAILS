@@ -4,9 +4,11 @@ from rest_framework.decorators import api_view
 from . serializers import InstructionSerializer
 from . serializers import MLModelSerializer
 from . serializers import QuestionSerializer
+from . serializers import AnswerSerializer
 from . models import Instruction
 from . models import MLModel
 from . models import Question
+from . models import Answer
 
 
 @api_view(['GET'])
@@ -36,6 +38,11 @@ def getRoutes(request):
             'Endpoint': '/question/id',
             'Method': 'GET',
             'Description': 'Returns the specific question endpoint'
+        },
+        {
+            'Endpoint': '/answer/id',
+            'Method': 'GET',
+            'Description': 'Returns the specific answer endpoint'
         }
     ]
 
@@ -81,3 +88,10 @@ def getQuestion(request, pk):
 
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+def getAnswer(request, pk):
+    answer = Answer.objects.get(id=pk)
+    serializer = AnswerSerializer(answer, many=False)
+
+    return Response(serializer.data)

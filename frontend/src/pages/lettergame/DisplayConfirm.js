@@ -12,6 +12,7 @@ function DisplayConfirm() {
   let { id } = useParams();
 
   let [question, setQuestion] = useState([]);
+  let [ans, setAns] = useState([]);
 
   let answer = "";
 
@@ -23,6 +24,15 @@ function DisplayConfirm() {
     };
     getQuestion();
   }, [id, question.body]);
+
+  useEffect(() => {
+    const getAnswer = async () => {
+      let response = await fetch(`http://127.0.0.1:8000/api/answer/${id}/`);
+      let data = await response.json();
+      setAns(data);
+    };
+    getAnswer();
+  }, [id, ans.body]);
 
   const quest = String(question.body);
   const array = quest.split("_");
@@ -41,7 +51,7 @@ function DisplayConfirm() {
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
-        {answer === "R E C T O" ? (
+        {answer === ans.body ? (
           <>
             <button
               onClick={() => {
