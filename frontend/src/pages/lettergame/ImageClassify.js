@@ -4,8 +4,15 @@ import * as tf from "@tensorflow/tfjs";
 import { Link } from "react-router-dom";
 
 import "../../assets/styles/ImageClassify.css";
+import { pk } from "../Lessons/CourseContent";
+import { updatePk } from "../Lessons/CourseContent";
 
-export let prediction = "";
+let prediction = "";
+function resetPrediction(newPrediction) {
+  prediction = newPrediction;
+}
+
+export { prediction, resetPrediction };
 
 function ImageClassify() {
   const webcamRef = useRef(null);
@@ -33,7 +40,7 @@ function ImageClassify() {
     if (imageSrc) {
       const image = new Image();
       image.src = imageSrc;
-      image.onload = async () => await predict(image, model);
+      image.onload = () => predict(image, model);
     }
     const predict = (imageData, model) => {
       const tensor = tf.browser.fromPixels(imageData).toFloat();
@@ -49,13 +56,19 @@ function ImageClassify() {
     };
   }, [imageSrc, model]);
 
-  let id = 1;
-
   return (
     <>
       {prediction !== "" ? (
-        <Link to={"/displayconfirm/" + id}>
-          <button className="submitButton" onClick={capture}>
+        <Link to={"/displayconfirm/" + pk}>
+          <button
+            className="submitButton"
+            onClick={capture}
+            // onClick={() => {
+            //   capture();
+            //   updatePk(pk + 1);
+            //   console.log(pk);
+            // }}
+          >
             Submit
           </button>
         </Link>

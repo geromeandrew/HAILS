@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import "../../assets/styles/Popup.css";
 import { Link, useParams } from "react-router-dom";
 
-import { prediction } from "./ImageClassify";
+import { prediction, resetPrediction } from "./ImageClassify";
 import LetterGameBackground from "../../components/LetterGameBackground";
 import Confirm from "../../components/Confirm";
+import { pk } from "../Lessons/CourseContent";
+import { updatePk } from "../Lessons/CourseContent";
 
 function DisplayConfirm() {
   let { id } = useParams();
 
   let [question, setQuestion] = useState([]);
+  let [ans, setAns] = useState([]);
 
   let answer = "";
 
@@ -22,7 +25,14 @@ function DisplayConfirm() {
     getQuestion();
   }, [id, question.body]);
 
-  let pk = 1;
+  useEffect(() => {
+    const getAnswer = async () => {
+      let response = await fetch(`http://127.0.0.1:8000/api/answer/${id}/`);
+      let data = await response.json();
+      setAns(data);
+    };
+    getAnswer();
+  }, [id, ans.body]);
 
   const quest = String(question.body);
   const array = quest.split("_");
@@ -35,14 +45,28 @@ function DisplayConfirm() {
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
-        {answer === "L E G A R D A" ? (
-          <Link to={"/quiz-game/" + (pk + 1)} className="guess">
-            Confirm
-          </Link>
+        {answer === ans.body ? (
+          <>
+            <button
+              onClick={() => {
+                updatePk(pk + 1);
+                console.log("click" + pk);
+                resetPrediction("");
+              }}
+            >
+              <Link to={"/quiz-game/" + (pk + 1)} className="guess">
+                Confirm
+              </Link>
+            </button>
+          </>
         ) : (
-          <Link to={"/try-again/" + pk} className="guess">
-            Confirm
-          </Link>
+          <>
+            <button>
+              <Link to={"/try-again/" + pk} className="guess">
+                Confirm
+              </Link>
+            </button>
+          </>
         )}
       </div>
     </>

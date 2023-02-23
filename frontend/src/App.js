@@ -19,6 +19,7 @@ import Timeline from './components/Timeline/Timeline';
 import DisplayConfirm from './pages/lettergame/DisplayConfirm';
 import TryAgain from './pages/lettergame/TryAgain';
 import LoginFormat from './pages/LoginFormat';
+import ImageClassify from './pages/lettergame/ImageClassify';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
               <Route path='/help-center' element={<HelpCenter/>} /> 
               <Route path='/letter-game' element={<DetectionSection />} />
               <Route path='/instruction-section/:id' element={<InstructionSection />} />
-              <Route path='/letter-game/:id' element={<DetectionSection />} />
+              <Route path='/letter-game/:id' element={<ImageClassify />} />
               <Route path='/question' element={<QuestionSection/>} />
               {/* <Route path='/quiz-game/:id' element={<Test/>} /> */}
               <Route path='/sign-up' element={<Register />} />

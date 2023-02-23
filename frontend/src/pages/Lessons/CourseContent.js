@@ -10,8 +10,14 @@ import iconcam from '../../assets/images/icon-cam.svg'
 
 import { Link } from 'react-router-dom';
 
+let pk = 1;
+function updatePk (newPk) {
+  pk = newPk
+}
+
+export { pk, updatePk}
+
 function CourseContent({ course, handleCourseClick }) {
-    let id =1;
     
     if (course === "default") {
         return (
@@ -125,7 +131,7 @@ function CourseContent({ course, handleCourseClick }) {
                 This handshape should be held in front of your mouth, near your chin.
             </p><br />
             {/* <button onClick = {() => handleCourseClick("course-2")} className='start-learning'>NEXT</button> */}
-            <Link to={'/quiz-game/' + id} className = 'start-link'><button className='start-learning'>START GAME</button></Link>
+            <Link to={'/quiz-game/' + pk} className = 'start-link'><button className='start-learning'>START GAME</button></Link>
             {/* <a className='start-link' href='/quiz-game/' + id' ><button className='start-learning'>START GAME</button></a> */}
           </div>
         );
