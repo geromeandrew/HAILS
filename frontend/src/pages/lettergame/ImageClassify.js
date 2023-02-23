@@ -52,7 +52,24 @@ function ImageClassify() {
   let id = 1;
 
   return (
-    <>
+    <div className="image-classification-div">
+      <Webcam
+        className="webcam-div"
+        screenshotFormat="image/jpeg"
+        ref={webcamRef}
+        muted={true}
+        // style={{
+        //   position: "absolute",
+        //   margin: "auto",
+        //   width: "1215px",
+        //   height: "auto",
+        //   left: 0,
+        //   right: 0,
+        //   textAlign: "center",
+        //   border: "10px solid #4C51BF",
+        // }}
+      />
+
       {prediction !== "" ? (
         <Link to={"/displayconfirm/" + id}>
           <button className="submitButton" onClick={capture}>
@@ -61,27 +78,11 @@ function ImageClassify() {
         </Link>
       ) : (
         <button className="submitButton" onClick={capture}>
-          Submit
+          Capture
         </button>
       )}
 
-      <Webcam
-        screenshotFormat="image/jpeg"
-        ref={webcamRef}
-        muted={true}
-        style={{
-          position: "absolute",
-          margin: "auto",
-          width: "1215px",
-          height: "auto",
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          border: "10px solid #4C51BF",
-        }}
-      />
-
-      <canvas
+      {/* <canvas
         ref={canvasRef}
         style={{
           position: "absolute",
@@ -96,8 +97,8 @@ function ImageClassify() {
           width: "1215px",
           height: "750px",
         }}
-      />
-    </>
+      /> */}
+    </div>
   );
 }
 

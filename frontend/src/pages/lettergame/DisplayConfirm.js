@@ -30,15 +30,17 @@ function DisplayConfirm() {
   const second = array[1];
   answer = first + prediction + second;
 
+
   return (
     <>
       <LetterGameBackground />
       <div className="modal">
         <Confirm value={answer} />
-        {answer === "L E G A R D A" ? (
+        {answer === "R E C T O" ? (
           <Link to={"/quiz-game/" + (pk + 1)} className="guess">
             Confirm
           </Link>
+
         ) : (
           <Link to={"/try-again/" + pk} className="guess">
             Confirm

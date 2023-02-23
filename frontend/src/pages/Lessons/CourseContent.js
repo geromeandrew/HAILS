@@ -52,7 +52,7 @@ function CourseContent({ course, handleCourseClick }) {
                 The parameters are handshape, palm orientation, movement, location, and expression/non-manual signals.
                 All five parameters must be performed correctly to sign the word accurately. 
             </p><br/>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/FrkGrIiAoNE" title="5 Parameters of ASL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br/><br/>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/FrkGrIiAoNE" title="5 Parameters of ASL" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br/><br/>
             <p>
                 <b>Handshape:</b> This refers to the shape of the hand and fingers when forming a sign.
                 ASL has a set of distinct handshapes that are used to form signs, and each sign
@@ -89,7 +89,7 @@ function CourseContent({ course, handleCourseClick }) {
             <p>
               Before anything else, watch first the video about signing vowels
             </p><br />
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/4FvzEgUFcVQ" title="Learn vowels ASL | Johana Bonilla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br/><br/>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/4FvzEgUFcVQ" title="Learn vowels ASL | Johana Bonilla" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br/><br/>
             <img src= {vowels} />
             <p>
               In ASL, there are five primary vowels: A, E, I, O, and U.
