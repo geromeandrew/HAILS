@@ -40,7 +40,7 @@ function DisplayConfirm() {
   const second = array[1];
   answer = first + prediction + second;
 
-
+  
   return (
     <>
       <LetterGameBackground />
@@ -49,25 +49,28 @@ function DisplayConfirm() {
 
         {answer === ans.body ? (
           <>
-            <button
-              onClick={() => {
-                updatePk(pk + 1);
-                console.log("click" + pk);
-                resetPrediction("");
-              }}
+            <Link
+              to={pk >= 13 ? "/complete/" : "/quiz-game/" + (pk + 1)}
             >
-              <Link to={"/quiz-game/" + (pk + 1)} className="guess">
+              <button
+                onClick={() => {
+                  updatePk(pk + 1);
+                  console.log("click" + pk);
+                  resetPrediction("");
+                }} className="guess"
+              >
                 Confirm
-              </Link>
-            </button>
+              </button>
+            </Link>
           </>
         ) : (
           <>
-            <button>
-              <Link to={"/try-again/" + pk} className="guess">
+            <Link to={"/try-again/" + pk} >
+              <button className="guess">
                 Confirm
-              </Link>
-            </button>
+              </button>
+            </Link>
+            
           </>
         )}
       </div>

@@ -20,6 +20,7 @@ import DisplayConfirm from './pages/lettergame/DisplayConfirm';
 import TryAgain from './pages/lettergame/TryAgain';
 import LoginFormat from './pages/LoginFormat';
 import ImageClassify from './pages/lettergame/ImageClassify';
+import Complete from './pages/lettergame/Complete';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
               <Route path='/displayconfirm/:id' element={<DisplayConfirm/>} />
               <Route path='/try-again/:id' element={<TryAgain/>} />
               <Route path='/loginformat' element={<LoginFormat/>} />
+              <Route path='/complete' element={<Complete/>}/>
             </Routes>
           </Router>
         </div>
